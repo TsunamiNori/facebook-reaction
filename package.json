@@ -1,0 +1,13 @@
+{
+  "name": "reactions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "request": "^2.86.0"
+  }
+}
