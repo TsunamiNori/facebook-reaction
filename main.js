@@ -1,15 +1,18 @@
 let request = require('request');
 let _ = require('lodash');
-
 let FACEBOOK_URL_ENPOINT = 'https://graph.facebook.com/v2.10';
 let MAX_TIMEOUT = 10000; // Max request timeout in milliseconds
+
+///////// YOU CAN EDIT HERE /////////////////
+let my_id = 'YOUR_ID_HERE'; // Put your facebook ID here, ex: 100239482
+let token = 'YOUR_ACCESS_TOKEN_HERO'; // Your access token here: EAAAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+let ids = ['ID_PEOPLE', 'ID_PEOPLE']; // Put the ids of who you wanna react to, ex: ['105601560', '10081564']
+let react = ['LOVE', 'WOW', 'HAHA']; // List of reactions. Valid reaction list:  LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL
+
+///////// YOU MIGHT MODIFY THIS //////////////
 let REQUEST_TIME = 60; // Running task each XXX seconds. Do not put small number or your accout might be locked.
-let my_id = 'YOUR_ID_HERE';
-let token = 'YOUR_ACCESS_TOKEN_HERO';
-let ids = ['ID_PEOPLE', 'ID_PEOPLE']; // Put the ids of who you wanna react to
-let react = ['LOVE', 'WOW', 'HAHA']; // List of reactions. Reaction list:  LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL
 
-
+///////// DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU GONNA DO /////////
 setInterval(requestFeed, REQUEST_TIME * 1000);
 
 function requestFeed() {
